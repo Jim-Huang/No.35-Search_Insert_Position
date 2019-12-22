@@ -1,0 +1,14 @@
+/*由於題目規定陣列已排序，因此只需尋找陣列中有無一樣元素，直到找到一元素大於target即停止*/
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==target){
+                return i;
+            }          
+            if(nums[i]>target){
+                return i;
+            }
+        }
+        return nums.length;
+    }
+}
